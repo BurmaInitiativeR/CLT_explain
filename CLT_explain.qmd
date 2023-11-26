@@ -1,0 +1,75 @@
+---
+title: "CLT Explain"
+format: revealjs
+editor: visual
+---
+
+# Central Limit Theorem
+
+## CLT
+
+What is Central Limit Theorem ?
+
+## Measurement of Central Tendency 
+
+dafsa
+
+## Measurement of Dispersion 
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+-   
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+# Sample data
+data <- c(12, 15, 18, 21, 24, 27, 30, 33, 36, 39)
+
+# Calculate mean, median, and mode
+mean_value <- mean(data)
+median_value <- median(data)
+mode_value <- as.numeric(names(sort(table(data), decreasing = TRUE)[1]))
+
+```
+
+```{r}
+# Calculate variance and standard deviation
+variance_value <- var(data)
+sd_value <- sd(data)
+
+
+
+```
+
+```{r}
+# Visualize distribution
+hist(data, main = "Histogram of Sample Data", xlab = "Value", ylab = "Frequency", col = "lightblue")
+abline(v = mean_value, col = "red", lwd = 2)
+abline(v = median_value, col = "blue", lwd = 2)
+legend("topright", legend = c("Mean", "Median"), col = c("red", "blue"), lwd = 2)
+
+
+```
+
+```{r}
+# Simulate CLT
+set.seed(123)  # For reproducibility
+n_samples <- 1000
+sample_means <- numeric(n_samples)
+
+for (i in 1:n_samples) {
+  sample_data <- base::sample(data, size = 10, replace = TRUE)
+  sample_means[i] <- mean(sample_data)
+}
+
+# Plot the histogram of sample means
+hist(sample_means, main = "Histogram of Sample Means (CLT)", xlab = "Sample Mean", ylab = "Frequency", col = "lightgreen")
+
+```
