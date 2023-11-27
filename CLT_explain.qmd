@@ -6,13 +6,13 @@ editor: visual
 
 # Central Limit Theorem
 
-## Measurement of Central Tendency 
+## Measurement of Central Tendency
 
 1.  **Definition of Central Tendency:** Measures of central tendency are statistics that describe the center or midpoint of a dataset.
 
 2.  **Common Measures of Central Tendency:** We'll delve into commonly used measures of central tendency, including the mean (average), median (middle value), and mode (most frequent value). We'll see how these measures can be calculated using both population data and sample data.
 
-## Measurement of Dispersion 
+## Measurement of Dispersion
 
 1.  **Definition of Dispersion:** Measures of dispersion quantify the spread or variability in a dataset.
 
@@ -38,7 +38,7 @@ editor: visual
 
 2.  Comparison of Population and Sampling Distribution: We'll see how the characteristics of the population distribution relate to those of the sampling distribution.
 
-## Sample Data 
+## Sample Data
 
 ```{r}
 #| echo: true
@@ -54,7 +54,7 @@ sd_value <- sd(data)
 
 ```
 
-## Sample Data Distribution: Calculation 
+## Sample Data Distribution: Calculation
 
 ```{r}
 #| echo: true
@@ -133,11 +133,11 @@ for (i in 1:n_samples) {
 hist(sample_means, main = "Histogram of Sample Means (CLT)", xlab = "Sample Mean", ylab = "Frequency", col = "lightgreen")
 ```
 
-## Empirical Rules 
+## Empirical Rules
 
 ![Empirical Rules](1_empirical-rule.jpg)
 
-## Demo Sampling Distribution with Empirical Rules 
+## Demo Sampling Distribution with Empirical Rules
 
 ```{r}
 #| echo: true
@@ -192,7 +192,7 @@ abline(v = mean_value, col = "blue", lty = 1)
 text(mean_value, 10, round(mean_value, 2), col = "blue")
 ```
 
-## Is that true? 
+## Is that true?
 
 ```{r}
 #| echo: true
